@@ -56,4 +56,4 @@ avg_profit_per_order
 
 from rollup
 
-order by order_type;
+order by order_type
