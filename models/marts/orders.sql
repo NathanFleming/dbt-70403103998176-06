@@ -1,3 +1,5 @@
+{{ config(tags=['marts']) }}
+
 with
 
 orders as (
