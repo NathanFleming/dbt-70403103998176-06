@@ -1,8 +1,6 @@
 {{ config(tags=['staging']) }}
 
-with
-
-source as (
+with source as (
 
     -- {# This references seed (CSV) data - try switching to {{ source('ecom', 'raw_customers') }} #}
     select * from {{ ref('raw_customers') }}
@@ -12,8 +10,7 @@ source as (
 renamed as (
 
     select
-
-        ----------  ids
+        ---------- ids
         id as customer_id,
 
         ---------- text
