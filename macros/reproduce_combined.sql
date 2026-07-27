@@ -9,7 +9,7 @@
     with in_scope as (
         select * from {{ cte_name }}
         {%- if is_incremental() %}
-        where INGESTED_AT > (select max(INGESTED_AT) from {{ this }})
+        where INGESTED_AT > (select max(ingested_at) from {{ this }})
         {%- endif %}
     ),
 
