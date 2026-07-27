@@ -1,0 +1,3 @@
+table_name,source_column,target_column,source_type,ordinal_position
+stg_reproduce_combined,CUSTOMER_ID,customer_id,CHAR,1
+stg_reproduce_combined,CUSTOMER_NAME,customer_name,CHAR,2
