@@ -5,6 +5,7 @@ profile: jaffle_shop_17
 seed-paths: ["seeds"]
 model-paths: ["models"]
 macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
 clean-targets:
   - "target"
   - "dbt_packages"
