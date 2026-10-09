@@ -21,3 +21,10 @@ models:
       +materialized: view
     marts:
       +materialized: table
+
+# Test only: promote these two lint warnings to errors
+flags:
+  warn_error_options:
+    error:
+      - PreferCTE
+      - AliasLengthViolation
