@@ -1,7 +1,6 @@
-```yaml
 models:
   - name: customers
-    description: Customer overview data mart, offering key details for each unique customer. One row per customer.
+    description: Customer overview data mart, offering key details for each unique customer. One row per customer record.
     config:
       state:
         lag_tolerance: 3h
@@ -49,4 +48,3 @@ models:
         type: simple
         agg: count
         expr: customer_id
-```
