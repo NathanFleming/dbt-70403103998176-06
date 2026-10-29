@@ -1,8 +1,9 @@
+```yaml
 models:
   - name: customers
     description: Customer overview data mart, offering key details for each unique customer. One row per customer.
-    config: 
-      state: 
+    config:
+      state:
         lag_tolerance: 3h
     data_tests:
       - dbt_utils.expression_is_true:
@@ -26,6 +27,7 @@ models:
         description: Total number of orders a customer has ever placed.
       - name: first_ordered_at
         description: The timestamp when a customer placed their first order.
+        granularity: day
         dimension:
           type: time
       - name: last_ordered_at
@@ -47,3 +49,4 @@ models:
         type: simple
         agg: count
         expr: customer_id
+```
