@@ -1,6 +1,9 @@
 models:
   - name: stg_locations
     description: List of open locations with basic cleaning and transformation applied, one row per location.
+    config:
+      state: 
+        lag_tolerance: 1m
     columns:
       - name: location_id
         description: The unique key for each location.
@@ -13,7 +16,8 @@ unit_tests:
     description: "Check that opened_at timestamp is properly truncated to a date."
     model: stg_locations
     given:
-      - input: ref('raw_stores')
+      - input: source('ecom', 'raw_stores')
+
         rows:
           - {
               id: 1,

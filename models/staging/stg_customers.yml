@@ -1,6 +1,13 @@
 models:
   - name: stg_customers
+<<<<<<< HEAD
     description: Customer data with basic cleaning and transformation applied, one row per customer in table.
+=======
+    description: Customer data with basic cleaning and transformation applied, one row per customer.
+    config:
+      state:
+        lag_tolerance: 15m
+>>>>>>> 3303a8355d120c2d667c17f3c4ce7d9c274c1269
     columns:
       - name: customer_id
         description: The unique key for each customer.
