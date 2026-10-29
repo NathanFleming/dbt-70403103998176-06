@@ -3,7 +3,8 @@ version: 2
 # Try using these source definitions instead!
 sources:
   - name: ecom
-    schema: "{{ target.schema }}_raw"
+    schema: accelerating_fusion
+    database: raw
     description: E-commerce data for the Jaffle Shop
     tables:
       - name: raw_customers
